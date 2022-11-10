@@ -138,6 +138,37 @@
   margin-top:2.4rem;
   cursor: pointer;
 }
+.svg{
+  margin-left:-4px;
+  margin-right:12px;
+  height:60px;
+  width:60px;
+  margin-top:80px;
+  color:#102693;
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.opacity-25{
+  opacity:0.25;
+}
+.opacity-75{
+  opacity:0.75;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); 
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+   
+  }
+}
 
 @keyframes reveal {
   0% {
