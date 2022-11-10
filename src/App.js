@@ -31,9 +31,9 @@ function App() {
 console.log(pageNum)
 
   return (
-    <div className="app">
+    <div className="app ">
       <Header handleGetusers={handleGetusers} />
-      <div className="container">
+      <div className="container ">
         {loading ? <Loading /> : (
           <>
             {users.map((user) => (

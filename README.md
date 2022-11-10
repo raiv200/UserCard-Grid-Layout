@@ -14,10 +14,10 @@ IDE: Visual Studio Code
 ```
 
 
-[Live Demo URL](https://todo-list-app-raivikas.vercel.app/)
+[Live Demo URL](https://user-card-grid-layout-raivikas.vercel.app/)
 
 
-![Poject Final View](./public/todolist.PNG)
+![Poject Final View](./public/user-grid-layout.PNG)
 
 ### Project Overview
 
@@ -34,7 +34,7 @@ It consits of following Components:
 - JavaScript
 - React.js (Front-End UI Library)
 - Vercel (For Hosting the App)
-- API Used (https://reqres.in)
+- API Used (https://reqres.in/api/users?page=1)
 
 ### UI Resources Used
 
