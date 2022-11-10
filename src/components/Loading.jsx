@@ -1,5 +1,7 @@
 import React from "react";
 
+// Loading Circle SVG
+
 const Loading = () => {
   return (
     <svg

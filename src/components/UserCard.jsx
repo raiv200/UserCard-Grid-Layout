@@ -1,5 +1,7 @@
 import React from "react";
 
+// The User Profile Card
+
 const UserCard = ({firstName, lastName, email,imageURL}) => {
 
   return (

@@ -12,41 +12,55 @@ function App() {
   const changePageNumber = () => {
     setPageNum(!pageNum);
   };
-  
 
   const handleGetusers = async () => {
     try {
       setLoading(true);
-      const res = await fetch(`https://reqres.in/api/users?page=${pageNum ? 2 : 1}`);
+      const res = await fetch(
+        `https://reqres.in/api/users?page=${pageNum ? 2 : 1}`
+      );
       const users = await res.json();
       setUsers(users.data);
       changePageNumber();
       setLoading(false);
-      
     } catch (error) {
       console.log(error);
     }
   };
 
-console.log(pageNum)
+  console.log(pageNum);
 
   return (
     <div className="app ">
       <Header handleGetusers={handleGetusers} />
       <div className="container ">
-        {loading ? <Loading /> : (
-          <>
-            {users.map((user) => (
-            <UserCard
-              key={user.id}
-              firstName={user.first_name}
-              lastName={user.last_name}
-              email={user.email}
-              imageURL={user.avatar}
-            />
-          ))}
-          </>
-        )}
+        <div className="placeholder-text">
+          {users?.length === 0 && (
+            <>
+              <p>
+                Click On the Fetch Users Button to fetch the list of users.
+              </p>
+            </>
+          )}
+        </div>
+
+        <div className="grid-layout">
+          {loading ? (
+            <Loading />
+          ) : (
+            <>
+              {users.map((user) => (
+                <UserCard
+                  key={user.id}
+                  firstName={user.first_name}
+                  lastName={user.last_name}
+                  email={user.email}
+                  imageURL={user.avatar}
+                />
+              ))}
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
